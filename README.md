@@ -6,6 +6,7 @@ For this README.md, it serves as a definitive plan before we can write any appli
 #Database and Tools
 * MongoDB
 * PyMongo
+* Flask
 
 Below is the semi-completed tables with the customer/user-facing routes tables and the admin routes tables. 
 
