@@ -2,7 +2,7 @@ import uuid
 from database import db
 
 
-# ---------- SUBSCRIPTION PLANS ----------
+# SUBSCRIPTION PLANS 
 
 def create_subscription(data):
     plan = {
@@ -32,7 +32,7 @@ def delete_subscription(plan_id):
     return {"message": "Subscription plan deleted"}
 
 
-# ---------- USER MANAGEMENT ----------
+# USER MANAGEMENT 
 
 def get_users():
     users = list(db.users.find({}, {"password": 0}))
@@ -45,7 +45,7 @@ def delete_user(user_id):
     return {"message": "User deleted"}
 
 
-# ---------- CONTENT MANAGEMENT ----------
+# CONTENT MANAGEMENT 
 
 def create_content(data):
     content = {
@@ -98,7 +98,7 @@ def delete_content(content_id):
     return {"message": "Content deleted"}
 
 
-# ---------- GENRES ----------
+# GENRES
 
 def create_genre(data):
     genre = {
@@ -119,7 +119,7 @@ def delete_genre(genre_id):
     return {"message": "Genre deleted"}
 
 
-# ---------- MEDIA FILES ----------
+# MEDIA FILES 
 
 def add_media_file(content_id, data):
     media = {
