@@ -3,7 +3,7 @@ from datetime import datetime
 from database import db
 
 
-# ---------- PROFILE MANAGEMENT ----------
+# PROFILE MANAGEMENT 
 
 def create_profile(data):
     profile = {
@@ -29,7 +29,7 @@ def delete_profile(profile_id):
     return {"message": "Profile deleted successfully"}
 
 
-# ---------- WISHLIST ----------
+# WISHLIST 
 
 def add_to_wishlist(profile_id, content_id):
     entry = {
@@ -49,7 +49,7 @@ def remove_from_wishlist(profile_id, content_id):
     return {"message": "Removed from wishlist"}
 
 
-# ---------- VIEWING HISTORY ----------
+# VIEWING HISTORY 
 
 def add_history(profile_id, data):
     entry = {
