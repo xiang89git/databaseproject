@@ -21,10 +21,36 @@ headers = {"user_id": token}
 print("Creating profile...")
 resp = requests.post(f"{BASE}/profiles", json={
     "user_id": token,
-    "profile_name": "If you read this, say 67"
+    "profile_name": "67kid"
 })
 profile = resp.json()
 print(profile)
 
 profile_id = profile["_id"]
 print("User flow is completed")
+
+print("Adding to wishlist...")
+resp = requests.post(f"{BASE}/wishlist", json={
+    "content_id": token, 
+})
+wishlist_add = resp.json()
+print(wishlist_add)
+
+print("Removing item from the wishlist...")
+resp = requests.delete(f"{BASE}/wishlist", token
+)
+wishlist_delete = resp.json()
+print(wishlist_delete)
+
+print("Adding to viewing history...")
+resp = requests.post(f"{BASE}/history", json={
+    "content_id": token,
+})
+viewinghistory_add = resp.json()
+print(viewinghistory_add)
+
+print("Getting viewing history...")
+resp = requests.post(f"{BASE}/history", token
+)
+viewinghistory_items = resp.json()
+print(viewinghistory_items)
